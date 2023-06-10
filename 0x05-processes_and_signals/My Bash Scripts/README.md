@@ -1,1 +1,3 @@
-This directory contains Bash scripts I created while learning Processes and Signals in Bash.
+Practicing Bash Processes and Signals.
+
++ I added a Bash Script. Compile to see the examples of commands concerning PIDs and processes.
