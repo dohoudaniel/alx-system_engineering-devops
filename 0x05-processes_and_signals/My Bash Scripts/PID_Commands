@@ -123,7 +123,7 @@ echo "To kill a running process, you need to pass it's PID to the kill command."
 echo "E.g: kill (PID)"
 sleep 2
 echo -e "\e[33m It is not advised to run the \e[0m \e[1;32mkill 1\e[0m \e[33m command. It automatically initiates the system shutdown sequence. This means that running kill 1 in WSL will attempt to shut down the entire WSL environment.\e[0m"
-echo -e "\e[34m Never run the\e[0m \e[1;32mkill 1\e[0m \e[34mcommand.\n \e[0m"
+echo -e "\e[34m Never run the\e[0m \e[1;32mkill 1\e[0m \e[34mcommand!\n \e[0m"
 
 
 # 6. Using the /proc filesystem
