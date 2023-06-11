@@ -17,9 +17,9 @@ then
         # If the first argument is "stop"
         elif [ "$1" == "stop" ]
         then
+		echo "manage_my_process stopped"     # Displays "manage_my_process stopped"
                 kill "$(cat /var/run/my_process.pid)"     # Kills the 'manage_my_process' by using its PID (Essence of the 'cat' command)
                 rm -f /var/run/my_process.pid     # Forcefully deletes /var/run/my_process.pid
-                echo "manage_my_process stopped"     # Displays "manage_my_process stopped"
 
         # If the first argument is "restart"
         elif [ "$1" == "restart" ]
