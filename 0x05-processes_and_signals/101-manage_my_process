@@ -27,7 +27,8 @@ then
                 kill "$(cat /var/run/my_process.pid)"     # Kills the 'manage_my_process' by using its PID (Essence of the 'cat' command)
                 rm -f /var/run/my_process.pid     # Forcefully deletes /var/run/my_process.pid
                 ./manage_my_process &     # Starting the 'manage_my_process' process again
-                echo "$!" >> /var/run/my_process.pid     # Creating a file contains its own PID
+		touch /var/run/my_process.pid     # Create /var/run/my_process.pid
+                echo "$!" >> /var/run/my_process.pid     # Writing the PID of /var/run/my_process.pid into /var/run/my_process.pid
                 echo "manage_my_process restarted"     # Displays "manage_my_process restarted"
 
         # If any other argument or no argument is passed
