@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A function that Queries the Reddit API and returns
+A function that queries the Reddit API and returns
 the total number of subscribers
 for a given subreddit.
 If invalid, return 0
