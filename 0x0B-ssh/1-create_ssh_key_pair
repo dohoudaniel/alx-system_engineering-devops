@@ -10,5 +10,6 @@ passphrase='betty'
 # SSHing..
 ssh-keygen -t rsa -b 4096 -P "$passphrase" -f school
 #
-# Alternate code
+# Wrong code for task
 # ssh-keygen -t rsa -b 4096 -f ~/.ssh/school -N "$passphrase"
+# Reason: RSA key is stored in /root/.ssh/, while the other is created and generated (in this case, at the root of the repo)
