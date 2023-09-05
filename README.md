@@ -14,6 +14,6 @@ Here are a list of the concepts covered:
 + Web Infrastructure: Web Infrastructure Design
 + Shell - Bash: Command Line For The Win
 + Configuration Management (Puppet, Ruby)
-
++ Secure Shell (SSH)
 
 <!-- Remember the projects to revisit. -->
