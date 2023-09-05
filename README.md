@@ -15,5 +15,6 @@ Here are a list of the concepts covered:
 + Shell - Bash: Command Line For The Win
 + Configuration Management (Puppet, Ruby)
 + Secure Shell (SSH)
++ Web Servers
 
 <!-- Remember the projects to revisit. -->
