@@ -1,0 +1,9 @@
+# A Bash script that configures the SSH configuration file
+# for the local SSH client
+Host *
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
