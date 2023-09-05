@@ -4,6 +4,6 @@
 #    Uses 'pkill'
 exec { 'kill':
     command => ''pkill -f killmenow,
-    onlyif  => 'pgrep -f killmenow',
+    # onlyif  => 'pgrep -f killmenow',
     path    => ['/bin', '/usr/bin'],
 }
