@@ -7,7 +7,8 @@
 #
 # Storing the passphrase in a variable
 passphrase='betty'
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/school -N "$passphrase"
+# SSHing..
+ssh-keygen -t rsa -b 4096 -P "$passphrase" -f school
 #
 # Alternate code
-# ssh-keygen -t rsa -b 4096 -P $passphrase -f school
+# ssh-keygen -t rsa -b 4096 -f ~/.ssh/school -N "$passphrase"
