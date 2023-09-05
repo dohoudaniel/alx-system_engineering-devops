@@ -13,7 +13,7 @@ Here are a list of the concepts covered:
 + Networking Basics
 + Web Infrastructure: Web Infrastructure Design
 + Shell - Bash: Command Line For The Win
-
++ Configuration Management (Puppet, Ruby)
 
 
 <!-- Remember the projects to revisit. -->
