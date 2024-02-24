@@ -3,8 +3,7 @@
 # Initializing a variable i
 i=0
 # Using a whhile loop to increment i to print "Best School"
-while [ $i -lt 10 ]
+for ((i = 0; i < 10; i++))
 do
 	echo "Best School"
-	((i++)) # i increases by 1
 done
