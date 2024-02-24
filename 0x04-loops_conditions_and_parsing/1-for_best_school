@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script displays "Best School" 10 times
+# Initializing a variable i
+i=0
+# Using a whhile loop to increment i to print "Best School"
+while [ $i -lt 10 ]
+do
+	echo "Best School"
+	((i++)) # i increases by 1
+done
