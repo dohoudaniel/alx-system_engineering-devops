@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Using an until loop to print "Best School"
+# Declare a variable
+i=0
+until [ $i -eq 10 ]
+do
+	echo "Best School"
+	((i++))
+done
