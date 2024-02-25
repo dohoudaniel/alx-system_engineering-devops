@@ -3,7 +3,7 @@
 # Initializing a variable i
 i=0
 # Using a whhile loop to increment i to print "Best School"
-while [ $i -lt 10 ]
+while [ $i -le 10 ]
 do
 	if [ $i -eq 9 ]
 	then
