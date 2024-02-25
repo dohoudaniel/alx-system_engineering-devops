@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A script that prints "Best School" using a while loop
 # Initializing a variable i
-i=0
+i=1
 # Using a whhile loop to increment i to print "Best School"
 while [ $i -le 10 ]
 do
