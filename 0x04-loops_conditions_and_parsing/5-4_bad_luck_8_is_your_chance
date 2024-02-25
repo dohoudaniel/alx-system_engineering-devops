@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# A Bash script that loops from 1 to 10 and:
+# displays bad luck for the 4th loop iteration
+# displays good luck for the 8th loop iteration
+# displays Best School for the other iterations
+#
+# Declare a variable
+i=1
+# Using a whhile loop to increment i to print "Best School"
+while [ $i -le 10 ]
+do
+	if [ $i -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $i -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	# Increment our variable
+	((i++))
+done
