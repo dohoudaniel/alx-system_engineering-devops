@@ -7,6 +7,7 @@ j=0
 
 while [ $j -lt 20 ]
 do
+<<<<<<< HEAD
         case "$i" in
         4)
                 echo "$i"
@@ -28,4 +29,24 @@ do
 
         i=$((i + 1))
         j=$((j + 1))
+=======
+	case $i in
+		4)
+			echo "$i"
+			echo "bad luck from China"
+			;;
+		9)
+			echo "$i"
+			echo "bad luck from China"
+			;;
+		17)
+			echo "$i"
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo "$i"
+	esac
+	# Increment the variable
+	((i++))
+>>>>>>> parent of 7452d09... edit default print in case statement
 done
