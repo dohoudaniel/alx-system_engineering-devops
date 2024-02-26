@@ -9,21 +9,22 @@ i=1
 # Using a whhile loop to increment i to print "Best School"
 while [ $i -le 20 ]
 do
-	if [ $i -eq 4 ]
-	then
-		echo "$i"
-		echo "bad luck from China"
-	elif [ $i -eq 9 ]
-	then
-		echo "$i"
-		echo "bad luck from Japan"
-	elif [ $i -eq 17 ]
-	then
-		echo "$i"
-		echo "bad luck from Italy"
-	else
-		echo "$i"
-	fi
-	# Increment our variable
+	case $i in
+		4)
+			echo "$i"
+			echo "bad luck from China"
+			;;
+		9)
+			echo "$i"
+			echo "bad luck from China"
+			;;
+		17)
+			echo "$i"
+			echo "bad luck from Italy"
+			;;
+		*)
+			echo "$i"
+	esac
+	# Increment the variable
 	((i++))
 done
