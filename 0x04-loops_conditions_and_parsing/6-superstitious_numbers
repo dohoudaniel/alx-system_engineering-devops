@@ -11,20 +11,20 @@ while [ $i -le 20 ]
 do
 	echo "$i"
 	case $i in
-		4)
-			# echo "$i"
-			echo "bad luck from China"
-			;;
-		9)
-			# echo "$i"
-			echo "bad luck from China"
-			;;
-		17)
-			# echo "$i"
-			echo "bad luck from Italy"
-			;;
-		# *)
-			# echo "$i"
+	4)
+		# echo "$i"
+		echo "bad luck from China"
+		;;
+	9)
+		# echo "$i"
+		echo "bad luck from China"
+		;;
+	17)
+		# echo "$i"
+		echo "bad luck from Italy"
+		;;
+	# *)
+	# echo "$i"
 	esac
 	# Increment the variable
 	((i++))
