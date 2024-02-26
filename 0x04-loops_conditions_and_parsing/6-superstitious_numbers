@@ -4,23 +4,24 @@
 # displays good luck for the 8th loop iteration
 # displays Best School for the other iterations
 #
-# Declare a variable
-i=1
+# Declare two variables
+i=0
+j=1
 # Using a whhile loop to increment i to print "Best School"
-while [ $i -le 20 ]
+while [ $i -lt 20 ]
 do
 	echo "$i"
-	case $i in
+	case $j in
 		4)
-			# echo "$i"
+			# echo "$j"
 			echo "bad luck from China"
 			;;
 		9)
-			# echo "$i"
+			# echo "$j"
 			echo "bad luck from China"
 			;;
 		17)
-			# echo "$i"
+			# echo "$j"
 			echo "bad luck from Italy"
 			;;
 		# *)
@@ -28,4 +29,5 @@ do
 	esac
 	# Increment the variable
 	((i++))
+	((j++))
 done
