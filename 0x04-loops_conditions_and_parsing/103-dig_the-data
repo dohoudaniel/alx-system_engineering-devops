@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script parses Apache log files in list format.
+# Groups visitors by IP and HTTP status code.
+# Displays the number of occurrences, IP, and HTTP status code of each log, in sorted order.
+
+# Assign the name of the Apache log file to myBashFile
+myBashFile="apache-access.log"
+# Sorting the output from the myBashFile
+awk -F' ' '{ print $1, $9}' "$myBashFile" | sort | uniq -c | sort -nr
+#
+#
+# Explanation of the command: awk -F' ' '{ print $1, $9}' "$myBashFile" | sort | uniq -c | sort -nr
+# awk -F' ' '{ print $1, $9}' "$myBashFile":
+# awk -F' ': This invokes the awk command and sets the field separator to a space (' '), indicating that fields in the input are separated by spaces.
+# '{ print $1, $9}': This AWK program prints the first ($1) and ninth ($9) fields of each input line. Assuming the input is in the format of an Apache log file, $1 corresponds to the visitor's IP address, and $9 corresponds to the HTTP status code.
+# "$myBashFile": This specifies the input file for AWK to process, where "$myBashFile" is assumed to be a variable containing the file name.
+# sort: This command sorts the output from AWK alphabetically. Since AWK prints IP addresses and HTTP status codes, sorting alphabetically will group together identical IP addresses and HTTP status codes.
+# uniq -c: uniq -c counts the occurrences of consecutive lines in the sorted output and prefixes each line with the count of occurrences. Since the input is sorted, uniq effectively counts occurrences of unique combinations of IP addresses and HTTP status codes.
+# sort -nr: sort -nr sorts the output numerically (-n) in reverse order (-r) based on the count of occurrences. This ensures that the output is ordered from the greatest to the lowest number of occurrences, as requested.
