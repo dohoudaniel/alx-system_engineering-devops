@@ -5,29 +5,22 @@
 # displays Best School for the other iterations
 #
 # Declare two variables
-i=0
-j=1
+i=1
 # Using a whhile loop to increment i to print "Best School"
-while [ $i -lt 20 ]
+while [ $i -le 20 ]
 do
 	echo "$i"
-	case $j in
+	case $i in
 		4)
-			# echo "$j"
 			echo "bad luck from China"
 			;;
 		9)
-			# echo "$j"
 			echo "bad luck from China"
 			;;
 		17)
-			# echo "$j"
 			echo "bad luck from Italy"
 			;;
-		# *)
-			# echo "$i"
 	esac
 	# Increment the variable
 	((i++))
-	((j++))
 done
