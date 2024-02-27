@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# A Bash script that displays the content of the file /etc/passwd.
+# This script only displays username, user id, and the path to the home directory for the user
+#
+# Assigns the file path "/etc/passwd" to myFile
+# myFile is to be read
+myFile="/etc/passwd"
+# Read each line from myFile using a while loop specified by "myFile" and stores each line of myFile in "myLine"
+while IFS= read -r myLine
+do
+	# Echo the current line to the standard output, and display only the
+	# username, user id, and home directory for the user
+	echo "$myLine" | cut -d":" -f1,3,6
+done < "$myFile"
+# I redirected the input for the loop from the file specified by 'myFile'
+# In Bash scripting, input redirection is used to change where a command reads its input from. By default, many commands in Bash read input from the standard input (stdin), which is typically connected to the keyboard. However, you can redirect input to come from a file instead of the keyboard using input redirection.
+# In the case of reading from a file like /etc/passwd, input redirection is necessary because you want to process the contents of that file within your script. Instead of relying on user input or interactive commands, you want to automate the process of reading the file and extracting specific information from it.
+# By redirecting input from the file specified by myFile (or /etc/passwd in this case), you ensure that the read command inside the while loop reads each line from that file, one line at a time. Without input redirection, the read command would attempt to read from the default input source (typically the keyboard), which is not what you want in this scenario.
+# So, input redirection is necessary to make the script process the contents of the specified file (/etc/passwd) and extract the desired information from it in an automated and non-interactive manner.
+# I tested this without the file redirection, and yes, it read from the command line.
