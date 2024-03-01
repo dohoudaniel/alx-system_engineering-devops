@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-# A Bash script that stops 4-to_infinity_and_beyond process.
-# Requirements:
-# You cannot use kill or killall
-pkill -f 4-to_infinity_and_beyond
-# Trying to get the PID of the process and store it in a variable and then kill that variable
-# pidOfScript=$(ps -u | grep "bash ./4-to_infinity_and_beyond" | grep -v grep | awk '{print $2}')
-# kill "$pidOfScript"
+# A Bash script that sends a SIGTERM signal to the 7-highlander process
+#
+pidOfScript=$(ps -u | grep "bash ./7-highlander" | grep -v grep | awk '{print $2}')
+kill "$pidOfScript"
