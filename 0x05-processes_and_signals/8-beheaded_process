@@ -2,5 +2,5 @@
 # A Bash script that sends a SIGTERM signal to the 7-highlander process
 #
 # Storing the PID of the 7-highlander process in a variable
-pidOfScript=$(ps -u | grep "bash ./7-highlander" | grep -v grep | awk '{print $2}')
+pidOfScript=$(pgrep -f "7-highlander")
 kill -9 "$pidOfScript"
