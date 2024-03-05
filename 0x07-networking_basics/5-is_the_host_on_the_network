@@ -5,4 +5,9 @@
 # Displays Usage: 5-is_the_host_on_the_network {IP_ADDRESS} if no argument passed
 # Ping the IP 5 times
 ip_address=$1
-ping -c 5 "$ip_address"
+if [ -n "$ip_address" ]
+then
+	ping -c 5 "$ip_address"
+else
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
