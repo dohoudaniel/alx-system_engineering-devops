@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This Bas script helps the user to display all ports on a Linux system
+# netstat -tuln
+netstat -tulnep
