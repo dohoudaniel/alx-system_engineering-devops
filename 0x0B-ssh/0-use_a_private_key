@@ -4,5 +4,5 @@
 # Only use ssh single-character flags
 # -l must not be used
 # You do not need to handle the case of a private key protected by a passphrase
-ssh ubuntu@34.202.233.112 -i ~/.ssh/school
+ssh ubuntu@54.161.252.238 -i ~/.ssh/school
 # -i : This single character flag specifies the path to the private key file to be used for the connection.
