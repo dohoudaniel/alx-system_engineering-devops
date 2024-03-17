@@ -10,8 +10,8 @@
 # I copied this Bash script to the server using 0-transfer_file and ran it on the server
 # By default, Nginx listens on port 80
 #
-sudo apt-get update
-sudo apt-get -y install nginx
+apt-get update
+apt-get -y install nginx
 ufw allow "Nginx HTTP"
 echo "Hello World!" > /var/www/html/index.html
 service nginx start
