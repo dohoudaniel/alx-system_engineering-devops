@@ -5,6 +5,10 @@
 #	- return a page that contains the string "Hello World!" when queried at its root / with a GET request (requesting a page) using curl
 #	- A redirection must be a “301 Moved Permanently”
 #
+package {'nginx':
+    ensure   => 'present';
+}
+
 exec {'install':
     command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
     provider => shell,
