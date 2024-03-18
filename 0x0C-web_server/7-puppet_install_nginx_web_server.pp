@@ -1,29 +1,30 @@
-# Update the server and install Nginx
-exec { 'update_and_install_nginx':
-  command  => 'sudo apt-get update && sudo apt-get -y install nginx',
-  provider => shell,
-  require  => Package['nginx'], # Ensure the package is installed before running this command
+# A Puppet manifest that configures a server. It:
+# - Updates the server
+# - Installs an Nginx server
+# - Configures the Nginx web server to
+#	- return a page that contains the string "Hello World!" when queried at its root / with a GET request (requesting a page) using curl
+#	- A redirection must be a “301 Moved Permanently”
+#
+package {'nginx':
+    ensure   => 'present';
 }
 
-# Configure Nginx to return "Hello World!" at its root
-file { '/var/www/html/index.html':
-  ensure  => file,
-  content => 'Hello World!',
-  require => Exec['update_and_install_nginx'], # Ensure Nginx is installed before configuring it
+exec {'install':
+    command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
+    provider => shell,
 }
 
-# Configure Nginx to perform a 301 redirect for /redirect_me
-file { '/etc/nginx/sites-available/default':
-  ensure  => file,
-  content => template('nginx/default.conf.erb'), # Use a template file for Nginx configuration
-  require => File['/var/www/html/index.html'],    # Ensure index.html is created before modifying the Nginx config
-  notify  => Service['nginx'],                    # Reload Nginx after configuration changes
+exec {'Hello':
+    command  => 'echo "Hello World!" | sudo tee /var/www/html/index.html',
+    provider => shell,
 }
 
-# Ensure Nginx service is running and enabled
-service { 'nginx':
-  ensure    => running,
-  enable    => true,
-  subscribe => File['/etc/nginx/sites-available/default'], # Reload service when config changes
+exec {'sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\\n\\tlocation
+\/redirect_me {\\n\\t\\treturn 301 https:\/\/x.com;\\n\\t}/" /etc/nginx/sites-available/default':
+    provider => shell,
 }
 
+exec {'run':
+    command  => 'sudo service nginx restart',
+    provider => shell,
+}
