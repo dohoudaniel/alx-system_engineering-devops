@@ -6,7 +6,7 @@
 # Using what you did with 1-install_nginx_web_server, write 3-redirection so that it configures a brand new Ubuntu machine to the requirements asked in this task
 #
 # First, ensure that nginx is installed on the server
-sudo apt get update
+sudo apt update
 sudo apt-get -y install Nginx
 sudo ufw allow "Nginx HTTP"
 sudo service nginx start
