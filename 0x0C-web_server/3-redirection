@@ -4,6 +4,8 @@
 # The redirection must be a “301 Moved Permanently”
 # You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
 # Using what you did with 1-install_nginx_web_server, write 3-redirection so that it configures a brand new Ubuntu machine to the requirements asked in this task
+# I copied this Bash script to the server using 0-transfer_file and ran it on the server
+# By default, Nginx listens on port 80
 #
 # First, ensure that nginx is installed on the server
 sudo apt update
