@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# A Bash script that configures an Nginx server so that /redirect_me is redirecting to another page.
+# Requirements:
+# The redirection must be a “301 Moved Permanently”
+# You answer file should be a Bash script containing commands to automatically configure a Ubuntu machine to respect above requirements
+# Using what you did with 1-install_nginx_web_server, write 3-redirection so that it configures a brand new Ubuntu machine to the requirements asked in this task
+#
+# First, ensure that nginx is installed on the server
+sudo apt get update
+sudo apt-get -y install Nginx
+sudo ufw allow "Nginx HTTP"
+sudo service nginx start
+echo "Hello, World!" > /var/www/html/index.html
+#
+# Write into a /etc/nginx/sites-available/default file
+# The /etc/nginx/sites-available/default file in Nginx serves as the default configuration file for handling incoming requests to your server when no specific server block matches the request's domain or IP address.
+echo "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html;
+    location /redirect_me {
+        return 301 https://www.youtube.com/;
+    }
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+}" > /etc/nginx/sites-available/default
+#
+# Restart the Nginx service
+sudo service nginx restart
