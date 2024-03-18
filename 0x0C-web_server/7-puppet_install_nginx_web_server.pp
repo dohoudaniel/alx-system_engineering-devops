@@ -6,7 +6,7 @@
 #	- A redirection must be a “301 Moved Permanently”
 #
 exec {'install':
-    command  => 'sudo apt update ; sudo apt-get -y install nginx',
+    command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
     provider => shell,
 }
 
@@ -16,7 +16,7 @@ exec {'Hello':
 }
 
 exec {'sudo sed -i "s/listen 80 default_server;/listen 80 default_server;\\n\\tlocation
-\/redirect_me {\\n\\t\\treturn 301 https:\/\/learnopolia.tech\/;\\n\\t}/" /etc/nginx/sites-available/default':
+\/redirect_me {\\n\\t\\treturn 301 https:\/\/daniel.learnopolia.tech;\\n\\t}/" /etc/nginx/sites-available/default':
     provider => shell,
 }
 
