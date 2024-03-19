@@ -4,4 +4,3 @@
 # Make sure to try your script by passing different users
 current_user=$1
 echo "$current_user"
-# sudo -u "$1" whoami
