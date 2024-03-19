@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Fulfills task 0 but stops the Nginx process. Check README for explanation of line below
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
+service nginx restart
+pkill -o nginx
