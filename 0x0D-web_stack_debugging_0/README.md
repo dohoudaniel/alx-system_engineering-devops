@@ -20,4 +20,5 @@ The concepts I learned in this project are:
 	- pgrep
 	- ps auxf
 
+In this project, I debugged an Apache server.
 #### Debugging is Fun 🥂
