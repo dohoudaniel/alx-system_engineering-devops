@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# A Bash script that accepts one argument
+# the script should run the whoami command under the user passed as an argument
+# Make sure to try your script by passing different users
+current_user=$1
+echo "$current_user"
+# sudo -u "$1" whoami
