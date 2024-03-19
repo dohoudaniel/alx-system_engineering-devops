@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A Bash script that gets an Apache server to run on a web server and ensures that it returns a page containing a "Hello Holberton" when querying the root of it.
+#
+docker exec -ti 44f51e82e783 /bin/bash
+sudo service apache start
