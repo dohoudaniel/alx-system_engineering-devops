@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# A Bash Script that fixes a Docker container so that Nginx is running as the Nginx user
+# Requirements:
+# nginx must be running as nginx user
+# nginx must be listening on all active IPs on port 8080
+# You cannot use apt-get remove
+#
+# Replacing 'user' with our user Nginx
+sed -i "s/#user www-data/user nginx/g" /etc/nginx/nginx.conf
+# Replacing port 80 with 8080 in the config file
+sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+# Assigning permissions to our config file
+chmod 644 /etc/nginx/nginx.conf
+# Apache and Nginx both listen on the same port. We will need to end the apache2 process first, and restart the Nigins process with the new user
+# Ending the apache2 process
+pkill apache2
+# Restarting Nginx with its new user 'nginx'
+sudo -u nginx service nginx start
