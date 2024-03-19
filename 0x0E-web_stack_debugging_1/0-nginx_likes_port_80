@@ -3,4 +3,8 @@
 sudo apt-get update
 sudo apt-get install -y nginx
 sudo ufw allow 'Nginx HTTP'
-sudo systemctl start nginx
+# Setting the default configuration file
+# sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# Setting a sybmolic link, as done below, is best
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo systemctl restart nginx
