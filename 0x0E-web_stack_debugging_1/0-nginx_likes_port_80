@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # A Bash script that configures a Docker image to listen on port 80 for an Nginx installation
-sudo apt-get update
-sudo apt-get install -y nginx
+# sudo apt-get update
+# sudo apt-get install -y nginx
 # sudo ufw allow 'Nginx HTTP'
 # Setting the default configuration file
 # sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
