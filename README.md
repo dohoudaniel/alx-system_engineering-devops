@@ -18,6 +18,3 @@ Here are a list of the concepts covered:
 + Web Servers
 
 <!-- Remember the projects to revisit. -->
-
-
-Testing new rule
