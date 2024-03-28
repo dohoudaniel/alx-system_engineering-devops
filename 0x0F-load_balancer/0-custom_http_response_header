@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# A Bash script that Configure Nginx so that its HTTP response contains a custom header (on web-01 and web-02)
+# The name of the custom HTTP header must be X-Served-By
+# The value of the custom HTTP header must be the hostname of the server Nginx is running on
+# First, ensure that nginx is installed on the server
+sudo apt update
+sudo apt-get -y install nginx
+# sudo ufw allow "Nginx HTTP"
+sudo service nginx start
+echo "Hello, World!" > /var/www/html/index.html
+#
+# Write into a /etc/nginx/sites-available/default file
+# The /etc/nginx/sites-available/default file in Nginx serves as the default configuration file for handling incoming requests to your server when no specific server block matches the request's domain or IP address.
+echo "server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html;
+
+    add_header X-Served-By 125427-web-01;
+    location /redirect_me {
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+    location / {
+        try_files \$uri \$uri/ =404;
+    }
+}" > /etc/nginx/sites-available/default
+#
+# Restart the Nginx service
+sudo service nginx restart
