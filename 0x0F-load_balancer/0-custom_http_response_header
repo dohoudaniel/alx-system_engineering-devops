@@ -7,11 +7,11 @@ sudo apt update
 sudo apt-get -y install nginx
 # sudo ufw allow "Nginx HTTP"
 sudo service nginx start
-echo "Hello, World!" > /var/www/html/index.html
+sudo echo "Hello, World!" > /var/www/html/index.html
 #
 # Write into a /etc/nginx/sites-available/default file
 # The /etc/nginx/sites-available/default file in Nginx serves as the default configuration file for handling incoming requests to your server when no specific server block matches the request's domain or IP address.
-echo "server {
+sudo echo "server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
