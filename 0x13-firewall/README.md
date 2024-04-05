@@ -10,3 +10,4 @@ I learned the following concepts:
 - What an Access Control List is
 - What a Packet Filter Firewall is
 - How a Packet Filter Firewall works
+- Uncomplicated Firewall (UFW)
