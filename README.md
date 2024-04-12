@@ -16,5 +16,11 @@ Here are a list of the concepts covered:
 + Configuration Management (Puppet, Ruby)
 + Secure Shell (SSH)
 + Web Servers
-
++ Web Stack Debugginh
++ Load Balancing And Load Balancers
++ HTTP
++ HTTPS SSL
++ Domain Names And Requests For Web Pages (Example: Typing `www.google.com` in your web browser, and pressing `Enter`)
++ FireWall (Unmonitored Firewall (UFW))
++ The Linux Command Line (`Bash`)
 <!-- Remember the projects to revisit. -->
