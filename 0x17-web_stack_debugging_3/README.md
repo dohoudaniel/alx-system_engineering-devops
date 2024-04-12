@@ -55,4 +55,4 @@ In this project, I really enjoyed working on this project because:
 	php -i
 	```
 <br>
-This is just a walk-thourh of my debugging process, but I found out that I had to check out the WordPress installation directory for an Apache2 Web Server, the `/var/www/html` and I had to check all the `.php` files.
+This is just a walk-through of my debugging process, but I found out that I had to check out the WordPress installation directory for an Apache2 Web Server, the `\/var/www/html` and I had to check all the `\.php` files.
