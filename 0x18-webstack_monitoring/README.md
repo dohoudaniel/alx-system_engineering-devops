@@ -13,3 +13,6 @@ I learned the following concepts:
 	- Networking Servers
 - Application Performance Management (APM)
 - Nginx Logging and Monitoring
+- Datadog Agent
+- Installing the Datadog agent on a web server
+- System Checks
