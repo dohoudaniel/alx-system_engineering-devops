@@ -1,0 +1,108 @@
+ubuntu@125427-web-01:~/MySQL-5.7$ history | grep "mysql"
+  281  sudo apt install mysql-server
+  284  sudo apt-get install mysql-server-5.7=5.7.44-0ubuntu0.18.04.1
+  285  sudo apt-get install mysql-server-5.7=5.7.44-0ubuntu0.20.04.
+  288  sudo apt-get install mysql-server-5.7=5.7.44-0ubuntu0.20.04.
+  289  sudo apt-get install mysql-server-5.7
+  293  sudo apt-get install mysql-serverclear
+  296  sudo apt-get install mysql-server-5.7
+  298  wget https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.35-linux-glibc2.12-x86_64.tar.gz
+  305  mkdir MySQL-5.7 ; sudo mv mysql-5.7.35-linux-glibc2.12-x86_64.tar.gz MySQL-5.7
+  314  tar -zxvf mysql-5.7.35-linux-glibc2.12-x86_64.tar.gz 
+  315  mysql --version
+  317  sudo mv mysql-5.7.35-linux-glibc2.12-x86_64 /usr/local/mysql-5.7
+  319  sudo mkdir -p /var/lib/mysql
+  320  sudo chown -R mysql:mysql /var/lib/mysql
+  321  sudo groupadd mysql
+  322  sudo useradd -r -g mysql mysql
+  323  sudo chown -R mysql:mysql /var/lib/mysql
+  324  sudo /usr/local/mysql-5.7/bin/mysql_install_db --user=mysql --basedir=/usr/local/mysql-5.7 --datadir=/var/lib/mysql
+  325  sudo /usr/local/mysql-5.7/bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql-5.7 --datadir=/var/lib/mysql
+  326  sudo rm -rf /var/lib/mysql/*
+  327  sudo /usr/local/mysql-5.7/bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql-5.7 --datadir=/var/lib/mysql
+  328  mysql --version
+  329  sudo /usr/local/mysql-5.7/bin/mysqld_safe --user=mysql &
+  331  mysql --version
+  332  sudo /usr/local/mysql-5.7/bin/mysql_secure_installation
+  333  service start mysql
+  334  service mysql start
+  335  sudo service mysql start
+  336  service mysql start
+  337  sudo service mysql start
+  338  systemctl status mysql.service
+  340  cat mysql-5.7.35-linux-glibc2.12-x86_64.tar.gz 
+  341  sudo rm -rf /usr/local/mysql-5.7
+  342  sudo rm -rf /var/lib/mysql
+  343  sudo deluser mysql
+  344  sudo delgroup mysql
+  347  wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+  349  sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+  355  sudo apt-cache policy mysql-server
+  357  rm -rf mysql-apt-config_0.8.12-1_all.deb 
+  358  wget https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+  360  sudo rm /etc/apt/sources.list.d/mysql.list
+  364  dpkg --list | grep mysql
+  365  sudo apt remove mysql-apt-config 
+  366  sudo dpkg --remove mysql-server
+  367  sudo dpkg --purge mysql-server
+  368  dpkg --list | grep mysql
+  369  sudo apt remove mysql-apt-config
+  370  sudo rm -rf /var/lib/mysql
+  372  rm -rf /usr/bin/mysql-config
+  377  cd / ; tree | grep "mysql"
+  378  ldpkg-query -l '*mysql*'
+  380  dpkg-query -l '*mysql*'
+  381  sudo apt remove libmysqlclient-dev libmysqlclient21 mysql-common mysql-apt-config
+  383  sudo dpkg --purge mysql-apt-config
+  390  sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+  392  sudo apt-cache policy mysql-server
+  393  sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+  394  mysql --version
+  395  sudo mysql_secure_installation
+  408  sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf 
+  409  sudo systemctl restart mysql
+  410  systemctl status mysql.service
+  411  systemctl start mysql.service
+  412  service start mysql
+  413  service mysql start
+  416  cat temp_mysql_v 
+  417  systemctl start mysql.service
+  418  sudo systemctl start mysql.service
+  420  sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf 
+  421  sudo systemctl restart mysql
+  422  systemctl start mysql.service
+  423  tail -n 50 /var/log/mysql/error.log
+  424  sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf 
+  425  systemctl start mysql.service
+  426  service mysql start
+  427  sudo service mysql start
+  428  sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf 
+  429  sudo service mysql restart
+  430  sudo systemctl restart mysql.service
+  431  sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf 
+  432  sudo systemctl restart mysql.service
+  434  sudo mysql
+  437  sudo su - ; mysql -uroot -p
+  441  sudo apt autoremove ; sudo dpkg --remove mysql-server ; sudo dpkg --remove mysql-apt-config ; sudo rm -rf /var/lib/mysql/* ; sudo /usr/local/mysql-5.7/bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql-5.7 --datadir=/var/lib/mysql ; sudo rm -rf /usr/local/mysql-5.7 ; sudo rm -rf /var/lib/mysql ; sudo deluser mysql ; sudo delgroup mysql ; sudo rm -rf /etc/mysql ; ls /etc/apt/sources.list.d/ ; sudo rm /etc/apt/sources.list.d/mysql.list ; sudo apt update ; dpkg --list | grep mysql ; sudo dpkg --remove mysql-apt-config ; sudo dpkg --remove mysql-server ; sudo dpkg --purge mysql-server ; sudo dpkg --purge mysql-apt-config ; 
+  442  dpkg --list | grep mysql
+  447  sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+  449  sudo apt-cache policy mysql-server
+  450  sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+  451  tail -n 50 /var/log/mysql/error.log
+  452  tail -n1050 /var/log/mysql/error.log
+  453  mysql --version
+  454  sudo apt install -f mysql-client=5.7* mysql-community-server=5.7* mysql-server=5.7*
+  457  sudo apt reinstall mysql-community-server
+  460  sudo apt autoremove ; sudo dpkg --remove mysql-server ; sudo dpkg --remove mysql-apt-config ; sudo rm -rf /var/lib/mysql/* ; sudo /usr/local/mysql-5.7/bin/mysqld --initialize --user=mysql --basedir=/usr/local/mysql-5.7 --datadir=/var/lib/mysql ; sudo rm -rf /usr/local/mysql-5.7 ; sudo rm -rf /var/lib/mysql ; sudo deluser mysql ; sudo delgroup mysql ; sudo rm -rf /etc/mysql ; ls /etc/apt/sources.list.d/ ; sudo rm /etc/apt/sources.list.d/mysql.list ; sudo apt update ; dpkg --list | grep mysql ; sudo dpkg --remove mysql-apt-config ; sudo dpkg --remove mysql-server ; sudo dpkg --purge mysql-server ; sudo dpkg --purge mysql-apt-config ; sudo rm -rf /var/run/mysql*
+  464  history | grep "mysql"
+  465  sudo apt purge mysql-client-5.7 mysql-server-5.7 mysql-common mysql-server-core-5.7 mysql-client-core-5.7
+  466  sudo rm -rf /var/lib/mysql
+  467  sudo rm -rf /etc/mysql /etc/my.cnf /etc/mysql*
+  468  sudo rm -rf /var/log/mysql*
+  469  sudo deluser mysql
+  470  sudo delgroup mysql
+  473  dpkg --list | grep mysql
+  477  sudo dpkg -i mysql-apt-config_0.8.12-1_all.deb
+  479  sudo apt-cache policy mysql-server
+  480  sudo apt install -f mysql-client=5.7* mysql-server=5.7*
+  482  history | grep "mysql"
