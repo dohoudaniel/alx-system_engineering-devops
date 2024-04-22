@@ -24,4 +24,5 @@ Here are a list of the concepts covered:
 + FireWall (Unmonitored Firewall (UFW))
 + The Linux Command Line (`Bash`)
 + Postmortems
++ Setting up specific versions of MySQL on a web server(s). 
 <!-- Remember the projects to revisit. -->
