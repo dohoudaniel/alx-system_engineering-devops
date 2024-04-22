@@ -7,3 +7,5 @@ I learned the following concepts:
 - Setting up a MYSQL primary replica setup
 - BUilding a robust database backup strategy
 - The `mysqldump` command (see mysqldump.md).
+<br>
+To c=install MySQL 5.7 on your web server, check out this <a href="https://www.letscloud.io/community/how-to-install-mysql-57-on-ubuntu-2004">resource article</a>.
