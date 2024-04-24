@@ -8,4 +8,4 @@ I learned the following concepts:
 - BUilding a robust database backup strategy
 - The `mysqldump` command (see mysqldump.md).
 <br>
-To c=install MySQL 5.7 on your web server, check out this <a href="https://www.letscloud.io/community/how-to-install-mysql-57-on-ubuntu-2004">resource article</a>.
+To install <strong>MySQL Version 5.7</strong> on your web server, check out this <a href="https://www.letscloud.io/community/how-to-install-mysql-57-on-ubuntu-2004">resource article</a>.
