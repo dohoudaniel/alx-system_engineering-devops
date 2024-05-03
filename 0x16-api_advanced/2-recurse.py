@@ -9,10 +9,9 @@ Hint: The Reddit API uses pagination for separating pages of responses.
 
 
 from requests import get
-after = None
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, hot_list=[], after=None):
     """
     Queries the Reddit API and returns a list containing the titles
     of all hot articles for a given subreddit. If no results are
@@ -20,10 +19,10 @@ def recurse(subreddit, hot_list=[]):
     Arguments:
         subreddit (string): the subreddit to search for
     """
-    global after
     headers = {'User-Agent': 'Google Chrome Version 81.0.4044.129'}
     parameters = {'after': after}
-    url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
+    url = 'https://www.reddit.com/r/{}/hot.json?after={}'.format(
+            subreddit, after)
     response = get(
         url,
         params=parameters,
@@ -32,13 +31,12 @@ def recurse(subreddit, hot_list=[]):
     results = response.json()
 
     if response.status_code == 200:
-        afterData = results.get('data').get('after')
-        if afterData is not None:
-            afterDetails = afterData
-            recurse(subreddit, hot_list)
-        allData = results.get('data').get('children')
-        for postTitle in allData:
-            hot_list.append(postTitle.get('data').get('title'))
-        return hot_list
+        for children in results.get('data').get('children'):
+            hot_list.append(children.get("data").get("title"))
+
+        after = results.get('data').get('after')
+        if not after:
+            return hot_list
+        return recurse(subreddit, hot_list, after)
     else:
         return None
