@@ -20,12 +20,11 @@ def recurse(subreddit, hot_list=[], after=None):
         subreddit (string): the subreddit to search for
     """
     headers = {'User-Agent': 'Google Chrome Version 81.0.4044.129'}
-    parameters = {'after': after}
+    # parameters = {'after': after}
     url = 'https://www.reddit.com/r/{}/hot.json?after={}'.format(
             subreddit, after)
     response = get(
         url,
-        params=parameters,
         headers=headers,
         allow_redirects=False)
     results = response.json()
