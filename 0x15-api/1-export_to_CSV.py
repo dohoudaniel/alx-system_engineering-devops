@@ -23,6 +23,10 @@ if __name__ == "__main__":
     username = finalResponse.get('username')
     # taskStatus = finalResponse.get('completed')
     # taskTitle = finalResponse.get('title')
+    todoUrl = usersUrl + "/todos"
+    todoUrl = str(todoUrl)
+    todoResponse = requests.get(todoUrl)
+    tasks = todoResponse.json()
 
     # Storing the user data into a UserId.csv file
     with open('{}.csv'.format(employeeId), 'w') as myCSVFileObject:
