@@ -11,3 +11,4 @@ Some of the concepts I learned in this project include:
 - How to use the Reddit API to get information on a given subreddit
 - How to make a recursive API call
 - How to sort a dictionary by value
+- <a href="https://www.reddit.com/dev/api/">Reddit API Documentation</a>
