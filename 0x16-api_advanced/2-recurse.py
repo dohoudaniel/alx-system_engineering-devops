@@ -24,10 +24,10 @@ def recurse(subreddit, hot_list=[]):
     headers = {'User-Agent': 'Google Chrome Version 81.0.4044.129'}
     parameters = {'after': after}
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    response = get(url, headers=headers, params=limit, allow_redirects=False)
+    response = get(url, params=parameters, headers=headers, allow_redirects=False)
     results = response.json()
 
-    try:
+    if response.status_code == 200:
         afterData = results.get('data').get('after')
         if afterData is not None:
             afterDetails = afterData
@@ -36,5 +36,5 @@ def recurse(subreddit, hot_list=[]):
         for postTitle in allData:
             hot_list.append(postTitle.get('data').get('title'))
         return hot_list
-    except:
+    else:
         return None
