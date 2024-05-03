@@ -32,7 +32,6 @@ def recurse(subreddit, hot_list=[], after=None):
     if response.status_code == 200:
         for children in results.get('data').get('children'):
             hot_list.append(children.get("data").get("title"))
-
         after = results.get('data').get('after')
         if not after:
             return hot_list
