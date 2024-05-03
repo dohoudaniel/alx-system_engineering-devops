@@ -14,15 +14,12 @@ The JSON file name is of the format: USER_ID.csv
 
 import json
 import requests
-from sys import argv as cmdArg
 
 
 if __name__ == "__main__":
-    employeeId = cmdArg[1]
     usersUrl = "https://jsonplaceholder.typicode.com/users"
     response = requests.get(usersUrl)
     users = response.json()
-    username = response.get('username')
 
     myJSONdict = {}
     for user in users:
@@ -34,8 +31,8 @@ if __name__ == "__main__":
         userTodoDetails = requests.get(userTodoUrl)
         userTodoDetailsJSON = userTodoDetails.json()
         myJSONdict[userId] = []
-        for task in tasks:
-            myJSONdict[employeeId].append({
+        for task in userTodoDetailsJSON:
+            myJSONdict[userId].append({
                 "task": task.get('title'),
                 "completed": task.get('completed'),
                 "username": username
@@ -43,4 +40,4 @@ if __name__ == "__main__":
     # Writing into the JSON file
     with open('todo_all_employees.json', 'w') as myJSONFile:
         json.dump(myJSONdict, myJSONFile)
-        # myJSONFile will be employeeId.json
+        # myJSONFile will be todo_all_employees.json
