@@ -17,6 +17,7 @@ def top_ten(subreddit):
     Returns:
         The number of subscribers, or 0 if the subreddit is invalid.
     """
+
     if subreddit is None or not isinstance(subreddit, str):
         print("None")
 
