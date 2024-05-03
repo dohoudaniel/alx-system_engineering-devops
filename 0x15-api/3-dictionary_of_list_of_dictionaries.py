@@ -41,6 +41,6 @@ if __name__ == "__main__":
                 "username": username
                 })
     # Writing into the JSON file
-    with open('{}.json'.format(employeeId), 'w') as myJSONFile:
+    with open('todo_all_employees.json', 'w') as myJSONFile:
         json.dump(myJSONdict, myJSONFile)
         # myJSONFile will be employeeId.json
