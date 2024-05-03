@@ -23,8 +23,8 @@ if __name__ == "__main__":
 
     myJSONdict = {}
     for user in users:
-        userId = users.get('id')
-        username = users.get('username')
+        userId = user.get('id')
+        username = user.get('username')
         userUrl = 'https://jsonplaceholder.typicode.com/users/{}'.format(
                 userId)
         userTodoUrl = str(userUrl + "/todos")
