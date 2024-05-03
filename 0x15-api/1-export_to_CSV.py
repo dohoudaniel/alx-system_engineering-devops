@@ -27,7 +27,7 @@ if __name__ == "__main__":
     # Storing the user data into a UserId.csv file
     with open('{}.csv'.format(employeeId), 'w') as myCSVFileObject:
         for task in tasks:
-            myCSVFileObject.write('"{}", "{}", "{}", "{}"\n'.format(
+            myCSVFileObject.write('"{}","{}","{}","{}"\n'.format(
                 employeeId,
                 username,
                 finalResponse.get('completed'),
