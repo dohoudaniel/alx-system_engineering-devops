@@ -21,11 +21,17 @@ if __name__ == "__main__":
     response = requests.get(employeeUrl)
     finalResponse = response.json()
     username = finalResponse.get('username')
-    taskStatus = finalResponse.get('completed')
-    taskTitle = finalResponse.get('title')
+    # taskStatus = finalResponse.get('completed')
+    # taskTitle = finalResponse.get('title')
 
     # Storing the user data into a UserId.csv file
     with open('{}.csv'.format(employeeId), 'w') as myCSVFileObject:
         for task in tasks:
-            myCSVFileObject.write('"{}", "{}", "{}", "{}"'.format(
-                employeeId, username, taskStatus, taskTitle))
+            myCSVFileObject.write('"{}", "{}", "{}", "{}"\n'.format(
+                employeeId,
+                username,
+                finalResponse.get('completed'),
+                finalResponse.get('title')))
+    # We use a for loop to access the TaskCompletedStatus
+    # and the TaskTitle because it increases, as shown
+    # on the example on the intranet
