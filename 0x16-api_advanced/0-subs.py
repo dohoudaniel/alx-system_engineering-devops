@@ -23,3 +23,6 @@ def number_of_subscribers(subreddit):
 
     try:
         return response.get('data').get('subscribers')
+
+    except Exception:
+        return 0
