@@ -23,7 +23,7 @@ if __name__ == "__main__":
     username = finalResponse.get('username')
     # taskStatus = finalResponse.get('completed')
     # taskTitle = finalResponse.get('title')
-    todoUrl = usersUrl + "/todos"
+    todoUrl = employeeUrl + "/todos"
     todoUrl = str(todoUrl)
     todoResponse = requests.get(todoUrl)
     tasks = todoResponse.json()
