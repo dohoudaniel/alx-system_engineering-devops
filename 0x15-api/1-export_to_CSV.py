@@ -34,8 +34,8 @@ if __name__ == "__main__":
             myCSVFileObject.write('"{}","{}","{}","{}"\n'.format(
                 employeeId,
                 username,
-                tasks.get('completed'),
-                tasks.get('title')))
+                task.get('completed'),
+                task.get('title')))
     # We use a for loop to access the TaskCompletedStatus
     # and the TaskTitle because it increases, as shown
     # on the example on the intranet
